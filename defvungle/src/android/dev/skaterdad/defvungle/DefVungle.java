@@ -31,8 +31,6 @@ public class DefVungle {
 
     //-----
 
-    private DefVungleListener defVungleAdsListener;
-    private DefVungleInitializationListener defVungleAdsInitListener;
     private Activity activity;
 
     public DefVungle(Activity appActivity) {
@@ -110,6 +108,11 @@ public class DefVungle {
         }
 
         @Override
+        public void onAdEnd(String id, final boolean completed, final boolean isCTAClicked) {
+            DefVungle.onVungleAdsFinish(id);
+        }
+
+        @Override
         public void onAdClick(String id) {
             // User clicked on ad
         }
@@ -125,7 +128,7 @@ public class DefVungle {
         }
 
         @Override
-        public void onError(String id, VungleException exception) { 
+        public void onError(String id, VungleException error) { 
             DefVungle.onVungleAdsError(id, error.getLocalizedMessage());
         }
     };
