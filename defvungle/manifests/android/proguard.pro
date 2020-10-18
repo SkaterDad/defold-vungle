@@ -9,27 +9,6 @@
    *;
 }
 
-# Keep all classes in Vungle Ads package
--keep class com.vungle3d.ads.** {
-   *;
-}
-
-# Keep all classes in Vungle Services package
--keep class com.vungle3d.services.** {
-   *;
-}
-
--keep class com.agulev.defvungle.** {
+-keep class dev.skaterdad.defvungle.** {
 	*;
 }
-
--dontwarn com.google.ar.core.**
-
--keep public class android.net.http.SslError
--keep public class android.webkit.WebViewClient
-
--dontwarn android.webkit.WebView
--dontwarn android.net.http.SslError
--dontwarn android.webkit.WebViewClient
-
--dontwarn android.telephony.**
