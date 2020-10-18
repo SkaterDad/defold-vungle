@@ -10,3 +10,4 @@ builtins
 .internal
 /bob.jar
 /bundle.sh
+/apk
