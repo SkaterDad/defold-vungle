@@ -128,6 +128,6 @@ public class DefVungle {
         public void onError(String id, VungleException exception) { 
             DefVungle.onVungleAdsError(id, error.getLocalizedMessage());
         }
-    }
+    };
 
 }
