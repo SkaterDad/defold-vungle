@@ -38,7 +38,7 @@ public class DefVungle {
     }
 
     public void initialize(String gameId) {
-        Vungle.init(gameId, activity, new InitCallback() {
+        Vungle.init(gameId, activity.getApplicationContext(), new InitCallback() {
             @Override
             public void onSuccess() {
                 DefVungle.onVungleAdsInitialized();
