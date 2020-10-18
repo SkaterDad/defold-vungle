@@ -7,14 +7,14 @@
 JNIEXPORT void JNICALL Java_dev_skaterdad_defvungle_DefVungle_onVungleAdsReady(JNIEnv *env, jclass jcls, jstring jstr)
 {
   const char* ch = env->GetStringUTFChars(jstr, 0);
-  dmVungleAds::AddToQueue((int)dmVungleAds::TYPE_IS_READY,(char*)"placementId", (char*)ch, NULL, 0);
+  dmVungleAds::AddToQueue((int)dmVungleAds::TYPE_IS_READY,(char*)"placementId", (char*)ch, NULL, NULL);
   env->ReleaseStringUTFChars(jstr, ch);
 }
 
 JNIEXPORT void JNICALL Java_dev_skaterdad_defvungle_DefVungle_onVungleAdsStart(JNIEnv *env, jclass jcls, jstring jstr)
 {
   const char* ch = env->GetStringUTFChars(jstr, 0);
-  dmVungleAds::AddToQueue((int)dmVungleAds::TYPE_DID_START,(char*)"placementId", (char*)ch, NULL, 0);
+  dmVungleAds::AddToQueue((int)dmVungleAds::TYPE_DID_START,(char*)"placementId", (char*)ch, NULL, NULL);
   env->ReleaseStringUTFChars(jstr, ch);
 }
 
@@ -22,7 +22,7 @@ JNIEXPORT void JNICALL Java_dev_skaterdad_defvungle_DefVungle_onVungleAdsError(J
 {
   const char* chPid = env->GetStringUTFChars(jstrPid, 0);
   const char* chErr = env->GetStringUTFChars(jstrErr, 0);
-  dmVungleAds::AddToQueue((int)dmVungleAds::TYPE_DID_ERROR,(char*)"placementId", (char*)chPid, (char*)"message", chErr);
+  dmVungleAds::AddToQueue((int)dmVungleAds::TYPE_DID_ERROR,(char*)"placementId", (char*)chPid, (char*)"message", (char*)chErr);
   env->ReleaseStringUTFChars(jstrPid, chPid);
   env->ReleaseStringUTFChars(jstrErr, chErr);
 }
@@ -30,14 +30,14 @@ JNIEXPORT void JNICALL Java_dev_skaterdad_defvungle_DefVungle_onVungleAdsError(J
 JNIEXPORT void JNICALL Java_dev_skaterdad_defvungle_DefVungle_onVungleAdsFinish(JNIEnv *env, jclass jcls, jstring jstr)
 {
   const char* ch = env->GetStringUTFChars(jstr, 0);
-  dmVungleAds::AddToQueue((int)dmVungleAds::TYPE_DID_FINISH,(char*)"placementId", (char*)ch, NULL, 0);
+  dmVungleAds::AddToQueue((int)dmVungleAds::TYPE_DID_FINISH,(char*)"placementId", (char*)ch, NULL, NULL);
   env->ReleaseStringUTFChars(jstr, ch);
 }
 
 JNIEXPORT void JNICALL Java_dev_skaterdad_defvungle_DefVungle_onVungleAdsReward(JNIEnv *env, jclass jcls, jstring jstr)
 {
   const char* ch = env->GetStringUTFChars(jstr, 0);
-  dmVungleAds::AddToQueue((int)dmVungleAds::TYPE_DID_REWARD,(char*)"placementId", (char*)ch, NULL, 0);
+  dmVungleAds::AddToQueue((int)dmVungleAds::TYPE_DID_REWARD,(char*)"placementId", (char*)ch, NULL, NULL);
   env->ReleaseStringUTFChars(jstr, ch);
 }
 
@@ -46,13 +46,13 @@ JNIEXPORT void JNICALL Java_dev_skaterdad_defvungle_DefVungle_onVungleAdsReward(
 JNIEXPORT void JNICALL Java_dev_skaterdad_defvungle_DefVungle_onVungleAdsInitializationError(JNIEnv *env, jclass jcls, jstring jstr)
 {
   const char* ch = env->GetStringUTFChars(jstr, 0);
-  dmVungleAds::AddToQueue((int)dmVungleAds::TYPE_INIT_ERROR,(char*)"message", (char*)ch, NULL, 0);
+  dmVungleAds::AddToQueue((int)dmVungleAds::TYPE_INIT_ERROR,(char*)"message", (char*)ch, NULL, NULL);
   env->ReleaseStringUTFChars(jstr, ch);
 }
 
 JNIEXPORT void JNICALL Java_dev_skaterdad_defvungle_DefVungle_onVungleAdsInitialized(JNIEnv *env, jclass jcls)
 {
-  dmVungleAds::AddToQueue((int)dmVungleAds::TYPE_INITIALIZED, NULL, NULL, NULL, 0);
+  dmVungleAds::AddToQueue((int)dmVungleAds::TYPE_INITIALIZED, NULL, NULL, NULL, NULL);
 }
 
 //--------------------------------------------
