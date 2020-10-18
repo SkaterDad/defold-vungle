@@ -6,7 +6,7 @@ namespace dmVungleAds {
 void InitExtension();
 void FinalizeExtension();
 
-void initialize(const char*game_id, bool is_debug);
+void initialize(const char*game_id);
 void load(char* placementId);
 void show(char* placementId);
 
