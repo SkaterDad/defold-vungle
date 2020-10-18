@@ -30,7 +30,7 @@ struct CallbackData
   char* key_1;
   char* value_1;
   char* key_2;
-  int value_2;
+  char* value_2;
 };
 
 void SetLuaCallback(lua_State* L, int pos);
@@ -38,6 +38,6 @@ void CallbackUpdate();
 void Initialize();
 void Finalize();
 
-void AddToQueue(int type, char*key_1, char*value_1, char*key_2, int value_2);
+void AddToQueue(int type, char*key_1, char*value_1, char*key_2, char*value_2);
 
 } //namespace

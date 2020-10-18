@@ -37,7 +37,7 @@ static void UnregisterCallback(DefVungleListener* cbk)
     }
 }
 
-static void InvokeCallback(int type, char*key_1, char*value_1, char*key_2, int value_2, DefVungleListener* cbk)
+static void InvokeCallback(int type, char*key_1, char*value_1, char*key_2, char*value_2, DefVungleListener* cbk)
 {
     if(cbk->m_Callback == LUA_NOREF)
     {
@@ -70,7 +70,7 @@ static void InvokeCallback(int type, char*key_1, char*value_1, char*key_2, int v
             lua_createtable(L, 0, count_table_elements);
             luaL_push_pair_str_str(L, key_1, value_1);
             if (key_2 != NULL) {
-                luaL_push_pair_str_num(L, key_2, value_2);
+                luaL_push_pair_str_str(L, key_2, value_2);
             }
         }
 
