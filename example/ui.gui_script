@@ -2,13 +2,13 @@ local dirtylarry = require "dirtylarry/dirtylarry"
 
 local sys_name = sys.get_sys_info().system_name
 local gameIDs = {
-    ["Android"] = "1401815",
+    ["Android"] = "5f8c98dcb17ce38289095c47",
 }
 
 local BACK_KEY = hash("back")
 
-local REWARDED = "rewardedVideo"
-local VIDEO = "video"
+local REWARDED = "REWARDED-2885630"
+local VIDEO = "DEFAULT-5294469"
 
 --log logic
 local gprint = print
@@ -126,18 +126,12 @@ function on_input(self, action_id, action)
         init_vungle_ads(self, gameIDs[sys_name])
     end)
 
-    dirtylarry:button(REWARDED, action_id, action, function ()
-        print_placement_state(REWARDED)
+    dirtylarry:button("rewardedVideo", action_id, action, function ()
         show_ad(self, REWARDED)
     end)
 
-    dirtylarry:button(VIDEO, action_id, action, function ()
-        print_placement_state(VIDEO)
+    dirtylarry:button("video", action_id, action, function ()
         show_ad(self, VIDEO)
-    end)
-
-    dirtylarry:button("default", action_id, action, function ()
-        show_ad(self)
     end)
 
     dirtylarry:button("set_callback", action_id, action, function ()
