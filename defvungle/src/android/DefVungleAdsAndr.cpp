@@ -78,7 +78,7 @@ void InitExtension() {
   ClassLoader class_loader = ClassLoader(env);
   jclass cls = class_loader.load("dev/skaterdad/defvungle/DefVungle");
   
-  g_duads.m_initialize = env->GetMethodID(cls, "initialize", "(Ljava/lang/String)V");
+  g_duads.m_initialize = env->GetMethodID(cls, "initialize", "(Ljava/lang/String;)V");
   g_duads.m_load = env->GetMethodID(cls, "load", "(Ljava/lang/String;)V");
   g_duads.m_show = env->GetMethodID(cls, "show", "(Ljava/lang/String;)V");
   g_duads.m_isReady = env->GetMethodID(cls, "isReady", "(Ljava/lang/String;)Z");
