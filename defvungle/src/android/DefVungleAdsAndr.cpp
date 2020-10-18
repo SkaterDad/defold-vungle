@@ -76,7 +76,7 @@ void InitExtension() {
   ThreadAttacher attacher;
   JNIEnv *env = attacher.env;
   ClassLoader class_loader = ClassLoader(env);
-  jclass cls = class_loader.load("com/agulev/defvungle/DefVungle");
+  jclass cls = class_loader.load("dev/skaterdad/defvungle/DefVungle");
   
   g_duads.m_initialize = env->GetMethodID(cls, "initialize", "(Ljava/lang/String)V");
   g_duads.m_load = env->GetMethodID(cls, "load", "(Ljava/lang/String;)V");
