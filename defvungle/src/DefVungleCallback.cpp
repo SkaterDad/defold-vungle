@@ -106,7 +106,7 @@ void SetLuaCallback(lua_State* L, int pos){
     }
 }
 
-void AddToQueue(int type, char*key_1, char*value_1, char*key_2, int value_2){
+void AddToQueue(int type, char*key_1, char*value_1, char*key_2, char*value_2){
     DM_MUTEX_SCOPED_LOCK(m_mutex);
     
     CallbackData data;
