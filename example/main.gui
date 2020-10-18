@@ -142,7 +142,7 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "init UnityAds with id"
+  text: "init VungleAds with id"
   font: "larryfont"
   id: "init/larrylabel"
   xanchor: XANCHOR_NONE

@@ -20,12 +20,12 @@ scale = 0.02
 shared_state = 1
 
 [library]
-include_dirs = defunityads
+include_dirs = defvungle
 
 [ios]
-bundle_identifier = com.agulev.test
+bundle_identifier = dev.skaterdad.vungletest
 
 [android]
-package = com.agulev.test
+package = dev.skaterdad.vungletest
 immersive_mode = 1
 
