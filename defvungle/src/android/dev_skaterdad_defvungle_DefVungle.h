@@ -28,7 +28,7 @@ JNIEXPORT void JNICALL Java_dev_skaterdad_defvungle_DefVungle_onVungleAdsStart
  * Signature: (ILjava/lang/String;)V
  */
 JNIEXPORT void JNICALL Java_dev_skaterdad_defvungle_DefVungle_onVungleAdsError
-  (JNIEnv *, jclass, jstring);
+  (JNIEnv *, jclass, jstring, jstring);
 
 /*
  * Class:     dev_skaterdad_defvungle_DefVungle
