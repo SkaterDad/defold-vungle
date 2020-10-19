@@ -1,4 +1,4 @@
-- name: vungleads
+- name: vungle
   type: table
   desc: Functions and constants for interacting with VungleAds APIs
 
@@ -11,7 +11,7 @@
 
     parameters:
     - name: gameId
-      type: table
+      type: string
 
     - name: callback
       type: function
@@ -23,10 +23,8 @@
           type: string
 
         - name: message
-          type: table
+          type: string
 
-    - name: testMode
-      type: table
 
 #*****************************************************************************************************
 
@@ -87,95 +85,4 @@
   - name: TYPE_INIT_ERROR
     type: number
 
-
 #*****************************************************************************************************
-
-  - name: ERROR_NOT_INITIALIZED
-    type: number
-
-  - name: ERROR_INITIALIZED_FAILED
-    type: number
-
-  - name: ERROR_INVALID_ARGUMENT
-    type: number
-
-  - name: ERROR_VIDEO_PLAYER
-    type: number
-
-  - name: ERROR_INIT_SANITY_CHECK_FAIL
-    type: number
-
-  - name: ERROR_AD_BLOCKER_DETECTED
-    type: number
-
-  - name: ERROR_FILE_IO
-    type: number
-
-  - name: ERROR_DEVICE_ID
-    type: number
-
-  - name: ERROR_SHOW
-    type: number
-
-  - name: ERROR_INTERNAL
-    type: number
-
-#*****************************************************************************************************
-
-  - name: INIT_ERROR_INTERNAL_ERROR
-    type: number
-
-  - name: INIT_ERROR_INVALID_ARGUMENT
-    type: number
-
-  - name: INIT_ERROR_AD_BLOCKER_DETECTED
-    type: number
-
-#*****************************************************************************************************
-
-  - name: BANNER_POSITION_TOP_LEFT
-    type: number
-
-  - name: BANNER_POSITION_TOP_CENTER
-    type: number
-
-  - name: BANNER_POSITION_TOP_RIGHT
-    type: number
-
-  - name: BANNER_POSITION_BOTTOM_LEFT
-    type: number
-
-  - name: BANNER_POSITION_BOTTOM_CENTER
-    type: number
-
-  - name: BANNER_POSITION_BOTTOM_RIGHT
-    type: number
-
-  - name: BANNER_POSITION_CENTER
-    type: number
-
-  - name: BANNER_POSITION_NONE
-    type: number
-
-#*****************************************************************************************************
-    
-  - name: BANNER_EVENT_DID_LOAD
-    type: number
-
-  - name: BANNER_EVENT_DID_UNLOAD
-    type: number
-
-  - name: BANNER_EVENT_DID_SHOW
-    type: number
-
-  - name: BANNER_EVENT_DID_HIDE
-    type: number
-
-  - name: BANNER_EVENT_DID_CLICK
-    type: number
-
-  - name: BANNER_EVENT_DID_ERROR
-    type: number
-
-#*****************************************************************************************************
-      
