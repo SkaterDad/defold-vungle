@@ -109,7 +109,9 @@ public class DefVungle {
 
         @Override
         public void onAdEnd(String id, final boolean completed, final boolean isCTAClicked) {
-            DefVungle.onVungleAdsFinish(id);
+            // SDK source implies this is depracated.
+            // Had to implement to prevent crashes...
+            //DefVungle.onVungleAdsFinish(id);
         }
 
         @Override
