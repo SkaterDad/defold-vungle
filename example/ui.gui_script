@@ -10,6 +10,11 @@ local BACK_KEY = hash("back")
 local REWARDED = "REWARDED-2885630"
 local VIDEO = "DEFAULT-5294469"
 
+local button_names = {
+    [REWARDED] = "rewardedVideo",
+    [VIDEO] = "video",
+}
+
 --log logic
 local gprint = print
 local log = {}
@@ -37,8 +42,8 @@ function update()
 end
 -- end log logic
 
-local function btn_ready(self, button_name)
-    gui.set_color(gui.get_node(button_name.."/larrylabel"), vmath.vector4(1, 1, 1, 1))
+local function btn_ready(self, placement_id)
+    gui.set_color(gui.get_node(button_names[placement_id].."/larrylabel"), vmath.vector4(1, 1, 1, 1))
 end
 
 local function vungle_ads_callback(self, msg_type, message)
@@ -55,7 +60,7 @@ local function vungle_ads_callback(self, msg_type, message)
     elseif msg_type == vungle.TYPE_DID_REWARD then
         print(message.placementId, " Rewarded Ad Complete")
     elseif msg_type == vungle.TYPE_INITIALIZED then
-        print("Vungle initialized")
+        print("Vungle init successful!")
     elseif msg_type == vungle.TYPE_INIT_ERROR then
         print("Vungle init error")
         print(message.message)
@@ -139,11 +144,11 @@ function on_input(self, action_id, action)
         load_ad(self, VIDEO)
     end)
 
-    dirtylarry:button("rewardedVideo", action_id, action, function ()
+    dirtylarry:button(button_names[REWARDED], action_id, action, function ()
         show_ad(self, REWARDED)
     end)
 
-    dirtylarry:button("video", action_id, action, function ()
+    dirtylarry:button(button_names[VIDEO], action_id, action, function ()
         show_ad(self, VIDEO)
     end)
 
