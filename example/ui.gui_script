@@ -97,6 +97,14 @@ local function init_vungle_ads(self, appId)
     end
 end
 
+local function load_ad(self, placementId)
+    if vungle then
+        if placementId then
+            vungle.load(placementId)
+        end
+    end
+end
+
 local function show_ad(self, placementId)
     if vungle then
         if placementId then
@@ -124,6 +132,11 @@ function on_input(self, action_id, action)
     
     dirtylarry:button("init", action_id, action, function ()
         init_vungle_ads(self, gameIDs[sys_name])
+    end)
+
+    dirtylarry:button("load", action_id, action, function ()
+        load_ad(self, REWARDED)
+        load_ad(self, VIDEO)
     end)
 
     dirtylarry:button("rewardedVideo", action_id, action, function ()
