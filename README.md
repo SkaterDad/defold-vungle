@@ -63,7 +63,8 @@ end
 -- When rewarded ad is finished, the callback will receive both TYPE_DID_FINISH and TYPE_DID_REWARD events.
   if vungle and vungle.isReady("REWARDED-12345") then
     vungle.show("REWARDED-12345")
-  end```
+  end
+```
 
 ### 4. Clear the callback in a "final" script lifecycle method
 ```lua
@@ -76,22 +77,26 @@ end
 
 ## Lua Functions
 
-### vungle.initialize(app_id, callback)
-### vungle.isInitialized()
-### vungle.setCallback(callback)
-### vungle.load(placement_id)
-### vungle.isReady(placement_id)
-### vungle.show(placement_id)
+```lua
+vungle.initialize(app_id, callback)
+vungle.isInitialized()
+vungle.setCallback(callback)
+vungle.load(placement_id)
+vungle.isReady(placement_id)
+vungle.show(placement_id)
+```
 
 ## Lua Constants
 
-### vungle.TYPE_IS_READY
-### vungle.TYPE_DID_START
-### vungle.TYPE_DID_ERROR
-### vungle.TYPE_DID_FINISH
-### vungle.TYPE_DID_REWARD
-### vungle.TYPE_INITIALIZED
-### vungle.TYPE_INIT_ERROR
+```lua
+vungle.TYPE_IS_READY
+vungle.TYPE_DID_START
+vungle.TYPE_DID_ERROR
+vungle.TYPE_DID_FINISH
+vungle.TYPE_DID_REWARD
+vungle.TYPE_INITIALIZED
+vungle.TYPE_INIT_ERROR
+```
 
 ## Callback Example
 
