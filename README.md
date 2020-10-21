@@ -2,7 +2,7 @@
 
 This is a [Defold Game Engine](https://defold.com) native extension which provides [Vungle Video Ads](https://vungle.com/monetize/) support.
 
-Platforms supported are Android & Amazon (aka. Android without Google Play services).  Most ad networks with rewarded video do not support these Amazon devices, but Vungle does!
+Platforms supported are Android & Amazon Fire (aka. Android without Google Play services).  Most ad networks with rewarded video do not support these Amazon devices, but Vungle does!
 
 *Disclaimer: This extension is independent and unofficial, and not associated with Vungle in any way.*
 
@@ -122,6 +122,14 @@ local function vungle_ads_callback(self, msg_type, message)
     end
 end
 ```
+
+## Lessons Learned
+
+When you set up an Amazon app in Vungle, those placements will only work on Amazon Fire devices.  If run on a regular Android device, even if downloaded from the Amazon Appstore, Vungle will return errors about OS mismatches and not serve you ads.   You will need a second app set up in Vungle, and submit 2 APKs to Amazon with different device targeting.
+
+Upon initialization, the Vungle SDK starts to preload an interstitial ad automatically.  It does not do this for rewarded ads.
+
+Vungle support says it's okay to call 'load' during or after an ad is shown, to prefetch for next time.
 
 ## Credits
 
