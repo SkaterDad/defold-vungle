@@ -11,3 +11,5 @@ builtins
 /bob.jar
 /bundle.sh
 /apk
+manifest.public.der
+manifest.private.der
