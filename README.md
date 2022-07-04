@@ -6,11 +6,15 @@ Platforms supported are Android & Amazon Fire (aka. Android without Google Play 
 
 *Disclaimer: This extension is independent and unofficial, and not associated with Vungle in any way.*
 
+Vundle SDK Version 6.11.0
+
+https://github.com/Vungle/Android-SDK/blob/master/CHANGELOG.md
+
 ## Installation
 
 You can use the DefVungle extension in your own project by adding this project as a [Defold library dependency](http://www.defold.com/manuals/libraries/). Open your `game.project` file and add the latest release ZIP file URL to your dependencies:
 
-> https://github.com/SkaterDad/defold-vungle/archive/1.0.0.zip
+> https://github.com/SkaterDad/defold-vungle/archive/1.1.0.zip
 
 If you prefer to walk on the wild side, you could point directly to the latest code, but I would not recommend it!
 
@@ -74,6 +78,10 @@ function final(self)
     end
 end
 ```
+
+### 5. Set minimum Android API version
+
+In `game.project`, set Android Minimum Sdk Version = 21.
 
 ## Lua Functions
 
