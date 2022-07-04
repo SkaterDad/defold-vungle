@@ -130,6 +130,11 @@ public class DefVungle {
         }
 
         @Override
+        public void creativeId(String creativeId) {
+            // Vungle creative ID to be displayed
+        }
+
+        @Override
         public void onError(String id, VungleException error) { 
             DefVungle.onVungleAdsError(id, error.getLocalizedMessage());
         }
